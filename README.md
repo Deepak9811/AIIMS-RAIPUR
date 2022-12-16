@@ -10,7 +10,7 @@
 
 3. Now you have to hack the node_modules. Go to node_modules/react-native/index.js starting around line 436 and change this:
 
-   // Deprecated Prop Types
+        // Deprecated Prop Types
 
         get ColorPropType(): $FlowFixMe {
         invariant(
@@ -39,25 +39,25 @@
         "ViewPropTypes has been removed from React Native. Migrate to " +
             "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
         );
-    },
+      },
 
    
 
 to this: 
 
-   // Deprecated Prop Types
-    get ColorPropType(): $FlowFixMe {
-    return require("deprecated-react-native-prop-types").ColorPropType
-    },
-     get EdgeInsetsPropType(): $FlowFixMe {
-    return require("deprecated-react-native-prop-types").EdgeInsetsPropType
-    },
-     get PointPropType(): $FlowFixMe {
-    return require("deprecated-react-native-prop-types").PointPropType
-    },
-    get ViewPropTypes(): $FlowFixMe {
-    return require("deprecated-react-native-prop-types").ViewPropTypes
-    },
+        // Deprecated Prop Types
+            get ColorPropType(): $FlowFixMe {
+            return require("deprecated-react-native-prop-types").ColorPropType
+            },
+            get EdgeInsetsPropType(): $FlowFixMe {
+            return require("deprecated-react-native-prop-types").EdgeInsetsPropType
+            },
+            get PointPropType(): $FlowFixMe {
+            return require("deprecated-react-native-prop-types").PointPropType
+            },
+            get ViewPropTypes(): $FlowFixMe {
+            return require("deprecated-react-native-prop-types").ViewPropTypes
+            },
 
 
 
