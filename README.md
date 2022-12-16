@@ -11,34 +11,35 @@
 3. Now you have to hack the node_modules. Go to node_modules/react-native/index.js starting around line 436 and change this:
 
    // Deprecated Prop Types
-      get ColorPropType(): $FlowFixMe {
-      invariant(
-      false,
-      "ColorPropType has been removed from React Native. Migrate to " +
-      "ColorPropType exported from 'deprecated-react-native-prop-types'.",
-      );
-      },
-      get EdgeInsetsPropType(): $FlowFixMe {
-      invariant(
-    false,
-    "EdgeInsetsPropType has been removed from React Native. Migrate to " +
-      "EdgeInsetsPropType exported from 'deprecated-react-native-prop-types'.",
-   );
-   },
-   get PointPropType(): $FlowFixMe {
-   invariant(
-    false,
-    "PointPropType has been removed from React Native. Migrate to " +
-     "PointPropType exported from 'deprecated-react-native-prop-types'.",
-   );
-   },
-   get ViewPropTypes(): $FlowFixMe {
-   invariant(
-   false,
-   "ViewPropTypes has been removed from React Native. Migrate to " +
-     "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
-   );
-   },
+
+        get ColorPropType(): $FlowFixMe {
+        invariant(
+        false,
+        "ColorPropType has been removed from React Native. Migrate to " +
+        "ColorPropType exported from 'deprecated-react-native-prop-types'.",
+        );
+        },
+        get EdgeInsetsPropType(): $FlowFixMe {
+        invariant(
+        false,
+        "EdgeInsetsPropType has been removed from React Native. Migrate to " +
+        "EdgeInsetsPropType exported from 'deprecated-react-native-prop-types'.",
+       );
+       },
+       get PointPropType(): $FlowFixMe {
+       invariant(
+       false,
+       "PointPropType has been removed from React Native. Migrate to " +
+       "PointPropType exported from 'deprecated-react-native-prop-types'.",
+       );
+       },
+        get ViewPropTypes(): $FlowFixMe {
+        invariant(
+        false,
+        "ViewPropTypes has been removed from React Native. Migrate to " +
+            "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
+        );
+    },
 
    
 
