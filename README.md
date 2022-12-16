@@ -65,3 +65,7 @@ to this:
 5. Rebuild the app. 
     
         Only thing to keep in mind is that this patch will need to be reapplied with every upgrade to react-native, or until the libraries in question are updated to import from deprecated-react-native-prop-types instead.
+
+
+
+6. after install react-native-snap-carousel and react-native-ratings      
