@@ -11,15 +11,15 @@
 3. Now you have to hack the node_modules. Go to node_modules/react-native/index.js starting around line 436 and change this:
 
    // Deprecated Prop Types
-   get ColorPropType(): $FlowFixMe {
-   invariant(
-    false,
-    "ColorPropType has been removed from React Native. Migrate to " +
+      get ColorPropType(): $FlowFixMe {
+      invariant(
+      false,
+      "ColorPropType has been removed from React Native. Migrate to " +
       "ColorPropType exported from 'deprecated-react-native-prop-types'.",
-   );
-   },
-   get EdgeInsetsPropType(): $FlowFixMe {
-   invariant(
+      );
+      },
+      get EdgeInsetsPropType(): $FlowFixMe {
+      invariant(
     false,
     "EdgeInsetsPropType has been removed from React Native. Migrate to " +
       "EdgeInsetsPropType exported from 'deprecated-react-native-prop-types'.",

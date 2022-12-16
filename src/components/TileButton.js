@@ -175,7 +175,7 @@ const TileButton = ({navigation,resourcesTextData,opacTextData,profileTextData,a
         </View>
 
         {/*  ---------------------------ACCOUNT------------------------------ */}
-        <View style={{width: '31%', marginLeft: 10, marginTop: 10}}>
+        {/* <View style={{width: '31%', marginLeft: 10, marginTop: 10}}>
           <TouchableOpacity
             style={styles.bxShoadow}
             onPress={() =>
@@ -211,7 +211,7 @@ const TileButton = ({navigation,resourcesTextData,opacTextData,profileTextData,a
               </View>
             </LinearGradient>
           </TouchableOpacity>
-        </View>
+        </View> */}
 
         {/* -----------------Search Book (OPAC)--------------------------- */}
         <View style={{width: '31%', marginLeft: 10, marginTop: 10}}>
