@@ -124,7 +124,7 @@ export default class About extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '3%',paddingRight:"3%"}}
             // onPress={() => this.openDrawer()}
             onPress={() => this.props.navigation.dispatch(DrawerActions.openDrawer())}
             // onPress={() => this.props.navigation.goBack()}

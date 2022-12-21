@@ -66,7 +66,7 @@ const Footer = () => {
           paddingVertical: 5,
           backgroundColor: '#fff',
         }}>
-        <Text>Powered by </Text>
+        <Text style={{color: '#4E4E4E'}}>Powered by </Text>
         <Text style={{color: '#f68823'}}> LIBCON</Text>
       </TouchableOpacity>
 

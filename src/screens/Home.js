@@ -83,7 +83,7 @@ export default class Home extends Component {
   }
 
   async componentDidMount() {
-    console.log('check first open');
+    // console.log('check first open');
     try {
       const email = JSON.parse(await AsyncStorage.getItem('email'));
       const userId = JSON.parse(await AsyncStorage.getItem('userId'));
@@ -96,7 +96,7 @@ export default class Home extends Component {
         email: email,
       });
 
-      console.log('email : ', this.state.email);
+      // console.log('email : ', this.state.email);
     } catch (error) {
       console.log('There has problem in AsyncStorage : ' + errro.message);
     }
@@ -264,7 +264,7 @@ export default class Home extends Component {
     })
       .then(result => {
         result.json().then(resp => {
-          console.log('resp event details :- ', resp);
+          // console.log('resp event details :- ', resp);
           if (resp.status === 'success') {
             this.setState({
               eventData: resp.data,
@@ -309,7 +309,7 @@ export default class Home extends Component {
     })
       .then(result => {
         result.json().then(resp => {
-          console.log('resp FeedBack details :- ', resp);
+          // console.log('resp FeedBack details :- ', resp);
           if (resp.status === 'success') {
             let FormatData = [];
 
@@ -368,7 +368,7 @@ export default class Home extends Component {
     const {radioButtons, email} = this.state;
     // return(console.log("check radio button :- ",email,radioButtons))
     let postFeed = radioButtons;
-    console.log('check radio button :- ', item);
+    // console.log('check radio button :- ', item);
 
     item.map((item, i) => {
       if (item.selected === true) {
@@ -386,7 +386,7 @@ export default class Home extends Component {
     let newData = [
       ...new Map(postFeed.map(item => [item.questionId, item])).values(),
     ];
-    console.log('new data radio button :- ', newData);
+    // console.log('new data radio button :- ', newData);
     this.setState({
       radioButtons: newData,
     });
@@ -410,7 +410,7 @@ export default class Home extends Component {
     let newData = [
       ...new Map(postFeed.map(item => [item.questionId, item])).values(),
     ];
-    console.log('new Data array :- ', newData);
+    // console.log('new Data array :- ', newData);
     this.setState({
       radioButtons: newData,
     });
@@ -440,7 +440,7 @@ export default class Home extends Component {
     let newData = [
       ...new Map(postFeed.map(item => [item.questionId, item])).values(),
     ];
-    console.log(newData);
+    // console.log(newData);
     this.setState({
       radioButtons: newData,
       description: des,
@@ -529,7 +529,7 @@ export default class Home extends Component {
     })
       .then(result => {
         result.json().then(resp => {
-          console.log('Quote of the day :- ', resp[0].q);
+          // console.log('Quote of the day :- ', resp[0].q);
 
           if (resp.length > 0) {
             this.setState({
