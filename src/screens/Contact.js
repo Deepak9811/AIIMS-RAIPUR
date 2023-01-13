@@ -66,10 +66,10 @@ const Contact = ({props, navigation}) => {
   const handleEmail = () => {
     if (description !== '') {
       setLoader(true);
-      let receiverEmail = 'libraryhelpdesk@bennett.edu.in';
+      let receiverEmail = 'library@aiimsraipur.edu.in';
       // let receiverEmail = 'theartistnw@gmail.com';
-      let enquiry = 'Bennet University Application Contact Enquiry';
-      // let url = `https://bitsomapi.libcon.in/sendEmail?toId=libraryhelpdesk@bennett.edu.in&subject=${enquiry}&bodyText=${description}`;
+      let enquiry = 'AIIMS Raipur Application Contact Enquiry';
+   
       let url = `${API_DEFAULT}/sendEmail?toId=${receiverEmail}&subject=${enquiry}&bodyText=${description}`;
       fetch(url, {
         method: 'POST',
@@ -130,7 +130,7 @@ const Contact = ({props, navigation}) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '4%'}}
             onPress={() => navigation.openDrawer()}
             // onPress={() => this.props.navigation.goBack()}
             >
@@ -140,7 +140,7 @@ const Contact = ({props, navigation}) => {
 
         <Appbar.Content title="Contact US"   style={{
               // alignItems: 'center'
-              paddingLeft:"18%"
+              paddingLeft:"5%"
               
             }}/>
       </Appbar.Header>
@@ -161,7 +161,7 @@ const Contact = ({props, navigation}) => {
               />
             </View>
 
-            <View style={styles.info}>
+            <View style={{}}>
               <RenderHtml
                 contentWidth={windowWidth}
                 source={{
@@ -176,7 +176,7 @@ const Contact = ({props, navigation}) => {
               <>
                 {showThank ? (
                   <>
-                    <View
+                    {/* <View
                       style={{
                         marginTop: 20,
                       }}>
@@ -190,7 +190,7 @@ const Contact = ({props, navigation}) => {
                         multiline={true}
                         onChangeText={e => setDescription(e)}
                       />
-                    </View>
+                    </View> */}
 
                     <View style={styles.buttonMap}>
                       {loader ? (
@@ -203,10 +203,11 @@ const Contact = ({props, navigation}) => {
                         </>
                       ) : (
                         <TouchableOpacity
-                          onPress={handleEmail}
+                          // onPress={handleEmail}
+                          onPress={() => Linking.openURL('mailto:deepaksingh92680@gmail.com')}
                           style={styles.buttonStyle}>
                           <Text style={{fontSize: 20, color: '#252a60'}}>
-                            Submit
+                            Send Mail
                           </Text>
                         </TouchableOpacity>
                       )}
@@ -335,6 +336,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     width: '80%',
     textAlign: 'center',
+    color:"#101010"
   },
   successIcon: {
     justifyContent: 'center',

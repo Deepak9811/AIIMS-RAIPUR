@@ -107,7 +107,7 @@ export default class About extends Component {
       )
         .then(data => {
           data.json().then(resp => {
-            console.log('searcher =>', resp.data);
+            console.log('searcher =>', resp);
 
             if (resp.status === 'success') {
               if (resp.data.response.length > 0) {
@@ -192,7 +192,7 @@ export default class About extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '4%'}}
             onPress={() => this.props.navigation.openDrawer()}
             // onPress={() => this.props.navigation.goBack()}
           >
@@ -201,7 +201,7 @@ export default class About extends Component {
 
           <Appbar.Content
             title="Search Book (OPAC)"
-            style={{paddingLeft: '12%'}}
+            style={{paddingLeft: '5%'}}
           />
         </Appbar.Header>
 
@@ -241,12 +241,13 @@ export default class About extends Component {
 
             <View style={styles.pkr}>
               <SelectPicker
-                style={{width: '100%'}}
+                style={{width: '100%',color:"#6f6f6f"}}
                 selectedValue={this.state.purposeIndexValue}
                 onValueChange={(value, index) => {
                   this.onPickerValue(value, index);
                 }}>
                 <SelectPicker.Item
+                 key={'0'}
                   label="Search Criteria"
                   color="#6f6f6f"
                   value="0"
@@ -254,8 +255,9 @@ export default class About extends Component {
                 />
                 {this.state.purposeData.map((item, i) => (
                   <SelectPicker.Item
+                  key={i}
                     label={item.type}
-                    color="#000"
+                    // color="#000"
                     value={item.id}
                   />
                 ))}
@@ -323,85 +325,7 @@ export default class About extends Component {
                           getTextValue={this.getTextValue}
                         />
 
-                        {/* {this.state.listArray.map((item, i) => {
-                          {
-                            if (item[2] === null) {
-                              this.state.showitem = false;
-                            } else {
-                              this.state.showitem = true;
-                            }
-                          }
-                          return (
-                            <React.Fragment key={i}>
-                              <TouchableOpacity
-                                style={styles.commonGradient}
-                                value={this.state.mName}
-                                onPress={() => this.getTextValue(item)}>
-                                <View
-                                  style={{
-                                    borderRadius: 10,
-                                  }}>
-                                  <LinearGradient
-                                    colors={['#fff', '#fff']}
-                                    style={{
-                                      borderRadius: 10,
-                                      paddingBottom: 10,
-                                    }}>
-                                    <View
-                                      style={{
-                                        paddingLeft: 15,
-                                        paddingRight: 5,
-                                        paddingTop: 10,
-                                        borderRadius: 10,
-                                      }}>
-                                      <Text style={styles.bookTitle}>
-                                        {item[1]}
-                                      </Text>
-
-                                      <Text
-                                        style={{
-                                          color: '#050000',
-                                          display: this.state.showitem
-                                            ? 'flex'
-                                            : 'none',
-                                        }}>
-                                        {item[2]}
-                                      </Text>
-                                    </View>
-
-                                    <View
-                                      style={[
-                                        styles.oldBookStyle,
-                                        {marginTop: 10},
-                                      ]}>
-                                      <Text
-                                        style={styles.currentIssuesDetailsMap}>
-                                        By :{' '}
-                                        <Text style={styles.bookAuther}>
-                                          {item[3]}
-                                        </Text>
-                                      </Text>
-                                    </View>
-
-                                    <View style={styles.oldBookStyle}>
-                                      <Text
-                                        style={styles.currentIssuesDetailsMap}>
-                                        Publisher :{' '}
-                                        <Text
-                                          style={{
-                                            width: '60%',
-                                            marginTop: 5,
-                                          }}>
-                                          {item[4]}
-                                        </Text>
-                                      </Text>
-                                    </View>
-                                  </LinearGradient>
-                                </View>
-                              </TouchableOpacity>
-                            </React.Fragment>
-                          );
-                        })} */}
+                        
                       </View>
                     </ScrollView>
                   </View>
@@ -413,9 +337,9 @@ export default class About extends Component {
                   style={{
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: '10%',
+                    marginTop: '8%',
                   }}>
-                  <Text>{this.state.message}</Text>
+                  <Text style={{color:"#737373"}}>{this.state.message}</Text>
                 </View>
               </>
             )}

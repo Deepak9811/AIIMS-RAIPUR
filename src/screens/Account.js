@@ -243,7 +243,7 @@ export default class Account extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '4%'}}
             onPress={() => this.props.navigation.openDrawer()}
             // onPress={() => this.props.navigation.goBack()}
             >
@@ -255,7 +255,7 @@ export default class Account extends Component {
             title="Account"
              style={{
               // alignItems: 'center'
-              paddingLeft:"18%"
+              paddingLeft:"5%"
               
             }}
           />

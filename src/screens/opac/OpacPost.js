@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const OpacPost = ({posts, loading,getTextValue}) => {
-//   if (loading) {
-//     return <Text>Loading...</Text>;
-//   }
+const OpacPost = ({posts, loading, getTextValue}) => {
+  //   if (loading) {
+  //     return <Text>Loading...</Text>;
+  //   }
 
   return (
     <View style={styles.listGroup}>
@@ -22,8 +22,7 @@ const OpacPost = ({posts, loading,getTextValue}) => {
             <TouchableOpacity
               style={styles.commonGradient}
               //   value={this.state.mName}
-              onPress={() =>getTextValue(item)}
-              >
+              onPress={() => getTextValue(item)}>
               <View
                 style={{
                   borderRadius: 10,
@@ -43,13 +42,15 @@ const OpacPost = ({posts, loading,getTextValue}) => {
                     }}>
                     <Text style={styles.bookTitle}>{item[1]}</Text>
 
-                    <Text
-                      style={{
-                        color: '#050000',
-                        // display: this.state.showitem ? 'flex' : 'none',
-                      }}>
-                      {item[2]}
-                    </Text>
+                    {item[2] && (
+                      <Text
+                        style={{
+                          color: '#050000',
+                          // display: this.state.showitem ? 'flex' : 'none',
+                        }}>
+                        {item[2]}
+                      </Text>
+                    )}
                   </View>
 
                   <View style={[styles.oldBookStyle, {marginTop: 10}]}>
@@ -119,10 +120,10 @@ const styles = StyleSheet.create({
     color: '#050000',
   },
 
-  listGroup:{
+  listGroup: {
     backgroundColor: '#eff7ee',
     paddingLeft: '3%',
     paddingRight: '3%',
-    paddingTop:"5%"
-  }
+    paddingTop: '5%',
+  },
 });

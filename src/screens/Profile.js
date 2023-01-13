@@ -186,7 +186,7 @@ export default class Profile extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '4%'}}
             onPress={() => this.props.navigation.openDrawer()}
             // onPress={() => this.props.navigation.goBack()}
             >
@@ -198,7 +198,7 @@ export default class Profile extends Component {
             title="Profile"
             style={{
               // alignItems: 'center'
-              paddingLeft:"20%"
+              paddingLeft:"5%"
               
             }}
           />
@@ -212,7 +212,7 @@ export default class Profile extends Component {
               {this.state.showpage ? (
                 <View style={{flex: 1}}>
                   {/* ===============INFO======================= */}
-                  <View style={{margin: '5%'}}>
+                  <View style={{margin: '5%',marginTop:"1%"}}>
                     <View style={styles.uDetail}>
                       {/* <Text style={styles.uNme}>Hello</Text>
                       <Text style={styles.uNme}>{this.state.userName}</Text> */}

@@ -134,9 +134,9 @@ const TileButton = ({navigation,resourcesTextData,opacTextData,profileTextData,a
         </View>
       </View>
 
-      {/* -----------------CHECKOUT------------------------------ */}
+      {/* -----------------SEARCH-BOOK------------------------------ */}
 
-      <View style={{flexDirection: 'row', marginTop: 10}}>
+      <View style={{flexDirection: 'row', marginTop: 10,justifyContent:"center"}}>
         <View style={{width: '31%', marginTop: 10}}>
           <TouchableOpacity
             style={styles.bxShoadow}
@@ -213,7 +213,7 @@ const TileButton = ({navigation,resourcesTextData,opacTextData,profileTextData,a
           </TouchableOpacity>
         </View> */}
 
-        {/* -----------------Search Book (OPAC)--------------------------- */}
+        {/* -----------------CONTACT--------------------------- */}
         <View style={{width: '31%', marginLeft: 10, marginTop: 10}}>
           <TouchableOpacity
             style={styles.bxShoadow}

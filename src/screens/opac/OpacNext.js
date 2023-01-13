@@ -62,7 +62,7 @@ export default class OpacNext extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{paddingLeft: '5%'}}
+            style={{paddingLeft: '4%',paddingRight:"2%"}}
             onPress={() => this.props.navigation.openDrawer()}
             // onPress={() => this.props.navigation.goBack()}
             >
@@ -79,7 +79,7 @@ export default class OpacNext extends Component {
               <View style={{width: '100%', height: '100%'}}>
                 <WebView
                   source={{
-                    uri: `https://libraryopac.bennett.edu.in/cgi-bin/koha/opac-detail.pl?biblionumber=${this.state.pageUrl}`,
+                    uri: `http://14.139.51.78:8081/cgi-bin/koha/opac-detail.pl?biblionumber=${this.state.pageUrl}`,
                   }}
                   javaScriptEnabled={true}
                   domStorageEnabled={true}

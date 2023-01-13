@@ -5,16 +5,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Text, StyleSheet, View, TouchableOpacity, Image} from 'react-native';
 
 const NewBookSlide = ({item, navigation, index}) => {
-  // const [showImage, setShowImage] = useState(false)
-  // let showImage;
-  // let url = `${API_DEFAULT}/Images/NoPhoto.png`;
-
-
-  // if (item.photo === url) {
-  //   showImage = false;
-  // } else {
-  //   showImage = true;
-  // }
 
   const getBiblionumber = async item => {
     console.log(item.biblionumber);
@@ -22,12 +12,6 @@ const NewBookSlide = ({item, navigation, index}) => {
     if (item.biblionumber.length !== 0) {
       await AsyncStorage.setItem('opacNext', JSON.stringify(item.biblionumber));
       await AsyncStorage.setItem('opacNextAuthor', JSON.stringify(item.title));
-      // const da = JSON.parse(await AsyncStorage.getItem('opacNext'));
-      // const opacNextAutho = JSON.parse(
-      //   await AsyncStorage.getItem('opacNextAuthor'),
-      // );
-      // console.log('data : ', da, opacNextAutho);
-      // console.log('mail', this.props.route.params.da);
       navigation.push('OpacNext');
     } else {
       console.log('no data');
@@ -41,15 +25,27 @@ const NewBookSlide = ({item, navigation, index}) => {
         onPress={() => getBiblionumber(item)}>
         <View style={[styles.subBdy]}>
           <View style={{}}>
-            <Image
+            {item.photo !=='http://aiimsraipur.libcon.in/Images/NoPhoto.png' ? (
+              <Image
               style={[
                 styles.childBdy,
                 // {
                 //   display: showImage ? 'flex' : 'none',
                 // },
               ]}
-              source={{uri: item.photo+ '?' + new Date()}}
+              source={{uri: item.photo+ '?' + new Date()}} 
             />
+            ):(
+              <Image
+              style={[
+                styles.childBdy,
+                // {
+                //   display: showImage ? 'flex' : 'none',
+                // },
+              ]}
+              source={require('../assets/image/noimage.png')} 
+            />
+            )}
 
             {/* {!showImage ? (
               <View style={styles.nonDetails}>

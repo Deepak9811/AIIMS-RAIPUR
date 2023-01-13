@@ -30,10 +30,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {API_URL} from '@env';
 import {windowHeight, windowWidth} from '../utils/Dimensions';
 
-
 import CryptoJS from 'crypto-js';
-
-
 
 const Login = ({navigation}) => {
   const [loaderMicrosoft, setLoaderMicrosoft] = useState(false);
@@ -53,8 +50,6 @@ const Login = ({navigation}) => {
     }
     fetchData();
   }, []);
-
-
 
   const check = () => {
     if (email === '' || pass === '') {
@@ -95,7 +90,8 @@ const Login = ({navigation}) => {
 
     let url = `${API_URL}LIBCON-PATINFO&parameter=${emails}`;
     // let url = `${API_URL}LIBCON-APP-PATINFO&parameter=jamil.ahmed@bennett.edu.in`
-    // return(console.log(url))
+    console.log(url);
+    // return;
 
     fetch(url, {
       method: 'GET',
@@ -254,7 +250,7 @@ const Login = ({navigation}) => {
             <View>
               <Text style={[styles.text_footer, {marginTop: 20}]}> Email </Text>
               <View style={styles.action}>
-                <FontAwesome name="user-o" color="#05375a" size={20} />
+                <Feather name="user" color="#05375a" size={20} />
 
                 <TextInput
                   returnKeyType="next"
@@ -338,8 +334,6 @@ const Login = ({navigation}) => {
                 )}
               </LinearGradient>
             </TouchableOpacity>
-
-           
 
             <View
               style={{
